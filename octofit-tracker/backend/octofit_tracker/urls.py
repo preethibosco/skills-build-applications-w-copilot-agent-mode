@@ -17,6 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponseRedirect
 from . import views
 
 urlpatterns = [
@@ -27,4 +28,5 @@ urlpatterns = [
     path('api/leaderboard/', views.LeaderboardList.as_view(), name='leaderboard-list'),
     path('api/workouts/', views.WorkoutList.as_view(), name='workout-list'),
     path('api/', views.api_root, name='api-root'),
+    path('', lambda request: HttpResponseRedirect('/api/'), name='root-redirect'),
 ]

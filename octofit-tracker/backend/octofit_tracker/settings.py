@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-^x(0^2p_)s8r#2qw6h(^$@p2l-&!!*&h-)2$pk4**o!%sl3ct4
 DEBUG = True
 
 # Allow host access to codespace URL and localhost
-ALLOWED_HOSTS = ['localhost', '[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev']
+ALLOWED_HOSTS = ['localhost', 'glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev']
 
 
 # Application definition
@@ -49,6 +49,10 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += ["octofit_tracker"]
+
+INSTALLED_APPS += [
+    'rest_framework',
+]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Activities.css'; // Importing custom styles
 
 function Activities() {
   const [activities, setActivities] = useState([]);

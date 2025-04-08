@@ -5,7 +5,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev/api/activities')
+    fetch('https://glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev/api/activities/')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);

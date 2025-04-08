@@ -4,7 +4,7 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev/api/workouts')
+    fetch('https://glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev/api/workouts/')
       .then(response => response.json())
       .then(data => setWorkouts(data));
   }, []);

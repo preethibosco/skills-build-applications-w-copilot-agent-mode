@@ -4,7 +4,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev/api/users')
+    fetch('https://glorious-garbanzo-vr54pp5vqpr269r-8000.app.github.dev/api/users/')
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);

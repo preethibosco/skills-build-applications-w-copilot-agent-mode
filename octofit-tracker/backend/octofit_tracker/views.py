@@ -7,12 +7,13 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 @api_view(['GET'])
 def api_root(request, format=None):
     base_url = request.build_absolute_uri('/')
+    codespace_url = "https://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev"
     return Response({
-        'users': f'{base_url}api/users/',
-        'teams': f'{base_url}api/teams/',
-        'activity': f'{base_url}api/activity/',
-        'leaderboard': f'{base_url}api/leaderboard/',
-        'workouts': f'{base_url}api/workouts/',
+        'users': f'{codespace_url}/api/users/',
+        'teams': f'{codespace_url}/api/teams/',
+        'activity': f'{codespace_url}/api/activity/',
+        'leaderboard': f'{codespace_url}/api/leaderboard/',
+        'workouts': f'{codespace_url}/api/workouts/',
     })
 
 class UserList(APIView):
